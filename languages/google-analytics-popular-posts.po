@@ -1,0 +1,204 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: google-analytics-popular-posts\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-03 22:29+0900\n"
+"PO-Revision-Date: 2011-08-03 22:29+0900\n"
+"Last-Translator: koichiyaima <yaima-surf@yaima.sakuraweb.com>\n"
+"Language-Team: koichiyaima <yaima-surf@yaima.sakuraweb.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;gettext;gettext_noop;__;_\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: google-analytics-popular-posts.php:37
+msgid "This plugin uses Google Analytics API to fetch data from your analytics account and displays popular posts in the widget."
+msgstr "Googole Analyticsから人気記事データを取得して表示します。"
+
+#: google-analytics-popular-posts.php:39
+msgid "Google Analytics Popular Posts"
+msgstr "人気記事"
+
+#: google-analytics-popular-posts.php:49
+msgid "<b>Title:</b>"
+msgstr "<b>タイトル:</b>"
+
+#: google-analytics-popular-posts.php:51
+#: google-analytics-popular-posts.php:247
+msgid "Thank you for using this plugin! I hope you enjoy it!<br />Author: <a href=\"http://yaima.sakuraweb.com\" target=\"_blank\">http://yaima.sakuraweb.com</a>"
+msgstr "ご利用ありごとうございます。気に入っていただけましたか。<br />制作: <a href=\"http://yaima.sakuraweb.com\" target=\"_blank\">http://yaima.sakuraweb.com</a>"
+
+#: google-analytics-popular-posts.php:140
+msgid "Options"
+msgstr "設定"
+
+#: google-analytics-popular-posts.php:141
+msgid "by"
+msgstr "制作:"
+
+#: google-analytics-popular-posts.php:146
+msgid "Google Account Email:"
+msgstr "Googleアカウントメールアドレス:"
+
+#: google-analytics-popular-posts.php:149
+msgid "Please fill the email address you use to login to your Google Analytics."
+msgstr "Google Analyticsにログインする時のメールアドレスを入力して下さい。"
+
+#: google-analytics-popular-posts.php:153
+msgid "Google Account Password:"
+msgstr "Googleアカウントパスワード:"
+
+#: google-analytics-popular-posts.php:156
+msgid "Please fill password correct too again."
+msgstr "Google Analyticsにログインする時のパスワードを間違いがないように入力して下さい。"
+
+#: google-analytics-popular-posts.php:160
+msgid "Google Analytics Profile ID:"
+msgstr "Google AnalyticsプロファイルID:"
+
+#: google-analytics-popular-posts.php:163
+msgid "Check for your Profile ID. <br />(UA-xxxxxxx-xx is not the Profile ID, The profile ID of your account can be found in the URL of your reports. For example, if you select a profile from an account and view your reports, you may see a URL string that looks like this:<br />https://www.google.com/analytics/reporting/?reset=1&id=123456&pdr=00000000-00000000<br />The profile ID is the number that comes right after the &id parameter. So, in this case, your profile ID would be 123456.)"
+msgstr "プロファイル IDを入力して下さい。<br />（UA-xxxxxxx-xx はプロファイル IDではありません。アカウントに登録されているプロファイル IDはレポートのURLから確認できます。例えば、特定のプロファイルを選択してレポートを表示すると、ブラウザのアドレスバーで下記のようなURL文字列を確認できます: <br />https://www.google.com/analytics/reporting/?reset=1&id=123456&pdr=00000000-00000000<br />プロファイル IDは、&idパラメータの直後に表示される数字です。この例の場合、プロファイル IDは123456になります。）"
+
+#: google-analytics-popular-posts.php:167
+msgid "Popular Posts Max Results:"
+msgstr "人気記事表示数:"
+
+#: google-analytics-popular-posts.php:170
+msgid "<strong>Example: 10 or 15 or 20 etc.</strong>"
+msgstr "<strong>（例）10 とか 15 とか 20 など。</strong>"
+
+#: google-analytics-popular-posts.php:174
+msgid "Stats Since Days :"
+msgstr "統計期間:"
+
+#: google-analytics-popular-posts.php:176
+msgid "<strong>Days</strong>"
+msgstr "<strong>日間</strong>"
+
+#: google-analytics-popular-posts.php:177
+msgid "Define the number of days you want the analytics Popular Posts.<br /><strong>Example: 7 or 30 or 90 etc.</strong>"
+msgstr "人気記事の統計期間を日数で指定してください。<br /><strong>（例）7 とか 30 とか 90 など。</strong>"
+
+#: google-analytics-popular-posts.php:181
+msgid "GAPI Filter:"
+msgstr "GAPI フィルタ:"
+
+#: google-analytics-popular-posts.php:183
+msgid "<strong>Filter expressions: filters=ga:pagePath=~^/</strong>"
+msgstr "<strong>フィルタ式: filters=ga:pagePath=~^/</strong>"
+
+#: google-analytics-popular-posts.php:184
+msgid "You can also use regular expressions.<br />If home page and other pages do not get, only get the permalink blog begins, just typing blog.<br /><strong>Example: blog</strong>"
+msgstr "フィルタ式では正規表現も使用できます。<br />ホームページや他のページを表示せずに、例えばパーマリンクがblogから始まる記事のみを表示する場合は blog と入力して下さい。<br /><strong>（例）blog</strong>"
+
+#: google-analytics-popular-posts.php:188
+msgid "Enable the display of stats date?"
+msgstr "統計日付を表示しますか？"
+
+#: google-analytics-popular-posts.php:191
+#: google-analytics-popular-posts.php:201
+#: google-analytics-popular-posts.php:211
+#: google-analytics-popular-posts.php:221
+#: google-analytics-popular-posts.php:231
+msgid "Yes"
+msgstr "はい"
+
+#: google-analytics-popular-posts.php:192
+#: google-analytics-popular-posts.php:202
+#: google-analytics-popular-posts.php:212
+#: google-analytics-popular-posts.php:222
+#: google-analytics-popular-posts.php:232
+msgid "No"
+msgstr "いいえ"
+
+#: google-analytics-popular-posts.php:194
+msgid "Can enable / disable the display of stats date."
+msgstr "統計日付を表示 / 非表示にすることができます。"
+
+#: google-analytics-popular-posts.php:198
+msgid "Enable the display of posted date?"
+msgstr "投稿日付を表示しますか？"
+
+#: google-analytics-popular-posts.php:204
+msgid "Can enable / disable the display of posted date."
+msgstr "投稿日付を表示 / 非表示にすることができます。"
+
+#: google-analytics-popular-posts.php:208
+msgid "Enable the display of excerpt?"
+msgstr "抜粋を表示しますか？"
+
+#: google-analytics-popular-posts.php:214
+msgid "Can enable / disable the display of excerpt."
+msgstr "抜粋を表示 / 非表示にすることができます。"
+
+#: google-analytics-popular-posts.php:218
+msgid "Enable Custom Style Sheet?"
+msgstr "カスタムスタイルシートを有効にしますか？"
+
+#: google-analytics-popular-posts.php:224
+msgid "Can enable / disable the custom style sheet."
+msgstr "カスタムスタイルシートを有効 / 無効にすることができます。"
+
+#: google-analytics-popular-posts.php:228
+msgid "Enable Cache?"
+msgstr "キャッシュ機能を有効にしますか？"
+
+#: google-analytics-popular-posts.php:234
+msgid "Can enable / disable the cache."
+msgstr "キャッシュ機能を有効/ 無効にすることができます。"
+
+#: google-analytics-popular-posts.php:238
+msgid "If Cache Enabled, Cache Expires in:"
+msgstr "キャッシュ機能の有効期間:"
+
+#: google-analytics-popular-posts.php:240
+msgid "<strong>Minutes</strong>"
+msgstr "<strong>分間</strong>"
+
+#: google-analytics-popular-posts.php:241
+msgid "<strong>Example: 30 or 60 (for 1 hour) or 1440 (60 minutes x 24 hours = 1440 minutes for 1 day) etc</strong>"
+msgstr "<strong>（例）30 とか 60 ( = 1時間 ) とか 1440 ( 60分間 x 24時間 = 1440分間 = 1日間 ) など。</strong>"
+
+#: google-analytics-popular-posts.php:258
+#: google-analytics-popular-posts.php:266
+msgid "Preview"
+msgstr "プレビュ"
+
+#: google-analytics-popular-posts.php:311
+msgid "<br /><strong>Debug Report :<br /></strong><small>( In-case you see this you have some problem kindly used this data to report me or fix things yourself remember in always here to help. )</small><br />"
+msgstr "<br /><strong>デバッグレポート :<br /></strong><small>( 問題が発生した場合は、内容を私に報告するため、またはご自身で問題を解決するためのデバッグレポートが常に表示されます。)</small><br />"
+
+#: google-analytics-popular-posts.php:316
+#: google-analytics-popular-posts.php:318
+msgid "<b>Google Analytics Popular Posts Alert :</b><br />Please check/recheck/enter your Google Analytics Profile ID."
+msgstr "<b>Google Analytics Popular Posts アラート :</b><br />Google Analytics プロファイル IDをチェック/再チェック/入力をして下さい。"
+
+#: google-analytics-popular-posts.php:320
+msgid "<b>Google Analytics Popular Posts Alert :</b><br />Please check/recheck/enter your Google Analytics account details (username and password)."
+msgstr "<b>Google Analytics Popular Posts アラート :</b><br />Google アカウントメールアドレス又はパスワードをチェック/再チェック/入力をして下さい。"
+
+#: google-analytics-popular-posts.php:322
+msgid "<b>Google Analytics Popular Posts Alert :</b><br />Unknown error please contact me at <a href=\\\"http://yaima.sakuraweb.com/plug-ins/google-analytics-popular-posts/#comments\\\">Google Analytics Popular Posts plugin page</a> if you find this error/message."
+msgstr "<b>Google Analytics Popular Posts アラート :</b>このエラー/メッセージが表示された場合は、未確認のエラーが発生していますので <a href=\\\"http://yaima.sakuraweb.com/plug-ins/google-analytics-popular-posts/#comments\\\">Google Analytics Popular Posts plugin page</a> からコメントをお願いします。"
+
+#: google-analytics-popular-posts.php:354
+msgid "<b>Google Analytics Popular Posts Error :</b><br />Please enter your account details in the options page."
+msgstr "<b>Google Analytics Popular Posts エラー :</b><br />Google アカウントメールアドレス又はパスワードを入力をして下さい。"
+
+#~ msgid "Days"
+#~ msgstr "日間"
+
+#~ msgid "Minutes"
+#~ msgstr "分間"
+
+#~ msgid "<b>Popular Posts Max Results:</b><br />Example: 10 or 15 or 20 etc."
+#~ msgstr "<b>人気記事表示数:</b><br />（例）10 とか 15 とか 20 など。"
+
+#~ msgid "<b>Site URL:</b><br />Example: http://www.XXXXX.com"
+#~ msgstr "<b>サイト URL:</b><br />（例）http://www.XXXXX.com"
