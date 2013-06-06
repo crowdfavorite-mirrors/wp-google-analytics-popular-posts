@@ -3,7 +3,7 @@
 Plugin Name: Google Analytics Popular Posts
 Plugin URI: http://wordpress.org/extend/plugins/google-analytics-popular-posts/
 Description: This plugin uses Google Analytics API to fetch data from your analytics account and displays popular posts in the widget.
-Version: 1.1.8
+Version: 1.1.8-SMP
 Author: koichiyaima
 Author URI: http://yaima.sakuraweb.com/
 */
@@ -361,42 +361,44 @@ function GoogleAnalyticsPopularPosts_widget_output() {
 	if ($GAPP_dDisp == "yes") {
 		$output = '<p class="popular_stats_date">'.$From.' ～ '.$date.'</p>'."\n";
 	}
+	$iteration=0;
+
 	foreach($ga->getResults() as $result) :
-		$getHostname = $result->getHostname();
-		$getPagepath = $result->getPagepath();
-		$postPagepath = 'http://'.$getHostname.$getPagepath;
-		$getPostID = url_to_postid($postPagepath);
-		if ($getPostID <= 0) {
-			$titleStr = $postPagepath;
-			$output .= '<ul>'."\n";
-			$output .= '<li>'."\n";
-			$output .= '<div class="popular_post"><a href='.$postPagepath.'>'.$titleStr.'</a></div>'."\n";
-			$output .= '</li>'."\n";
-			$output .= '</ul>'."\n";
-		}
-		else {
-			$titleStr = get_the_title($getPostID);
-			$post = get_post($getPostID);
-			$dateStr = mysql2date('Y-m-d', $post->post_date);
-			$contentStr = strip_tags(mb_substr($post->post_content, 0, 60));
-			$output .= '<ul>'."\n";
-			$output .= '<li>'."\n";
-			$output .= '<div class="popular_post"><a href='.$postPagepath.'>'.$titleStr.'</a><br />'."\n";
-			if ($GAPP_pDisp == "yes" and $GAPP_cView == "yes") {
-				$output .= '<div class="popular_post_date">'.$dateStr.'<br /></div>'."\n";
-				$output .= '<div class="popular_post_contents">'.$contentStr.' ...'.'</div>'."\n";
-			}
-			elseif ($GAPP_pDisp == "yes" and $GAPP_cView == "no") {
-				$output .= '<div class="popular_post_date">'.$dateStr.'<br /></div>'."\n";
-			}
-			elseif ($GAPP_pDisp == "no" and $GAPP_cView == "yes") {
-				$output .= '<div class="popular_post_contents">'.$contentStr.' ...'.'</div>'."\n";
+		if ($iteration<5) {
+			$getHostname = $result->getHostname();
+			$getPagepath = $result->getPagepath();
+			$postPagepath = 'http://'.$getHostname.$getPagepath;
+			$getPostID = url_to_postid($postPagepath);
+			if ($getPostID <= 0) {
+				$titleStr = $postPagepath;
+				//$output .= '<ul>'."\n";
+				//$output .= '<li>'."\n";
+				//$output .= '<div class="popular_post"><a href='.$postPagepath.'>'.$titleStr.'</a></div>'."\n";
+				//$output .= '</li>'."\n";
+				//$output .= '</ul>'."\n";
 			}
 			else {
+				$titleStr = get_the_title($getPostID);
+				$post = get_post($getPostID);
+				$thumb = get_the_post_thumbnail($getPostID,'thumb-medium');
+				$dateStr = mysql2date('Y-m-d', $post->post_date);
+				$contentStr = strip_tags(mb_substr($post->post_content, 0, 60));
+				$output .= '<div class="box"><a href='.$postPagepath.' class="wpp-post-title">'.$thumb.$titleStr.'</a><br />'."\n";
+				if ($GAPP_pDisp == "yes" and $GAPP_cView == "yes") {
+					$output .= '<div class="popular_post_date">'.$dateStr.'<br /></div>'."\n";
+					$output .= '<div class="popular_post_contents">'.$contentStr.' ...'.'</div>'."\n";
+				}
+				elseif ($GAPP_pDisp == "yes" and $GAPP_cView == "no") {
+					$output .= '<div class="popular_post_date">'.$dateStr.'<br /></div>'."\n";
+				}
+				elseif ($GAPP_pDisp == "no" and $GAPP_cView == "yes") {
+					$output .= '<div class="popular_post_contents">'.$contentStr.' ...'.'</div>'."\n";
+				}
+				else {
+				}
+				$output .= '</div>'."\n";
+				$iteration++;
 			}
-			$output .= '</div>'."\n";
-			$output .= '</li>'."\n";
-			$output .= '</ul>'."\n";
 		}
 	endforeach
 ?>
