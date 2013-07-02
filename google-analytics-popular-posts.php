@@ -3,7 +3,7 @@
 Plugin Name: Google Analytics Popular Posts
 Plugin URI: http://wordpress.org/extend/plugins/google-analytics-popular-posts/
 Description: This plugin uses Google Analytics API to fetch data from your analytics account and displays popular posts in the widget.
-Version: 1.1.8-SMP
+Version: 10.1.8
 Author: koichiyaima
 Author URI: http://yaima.sakuraweb.com/
 */
@@ -362,7 +362,7 @@ function GoogleAnalyticsPopularPosts_widget_output() {
 		$output = '<p class="popular_stats_date">'.$From.' ～ '.$date.'</p>'."\n";
 	}
 	$iteration=0;
-
+	
 	foreach($ga->getResults() as $result) :
 		if ($iteration<5) {
 			$getHostname = $result->getHostname();
