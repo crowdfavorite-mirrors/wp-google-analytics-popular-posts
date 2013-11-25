@@ -368,6 +368,7 @@ function GoogleAnalyticsPopularPosts_widget_output() {
 		$getPagepath = $result->getPagepath();
 		$postPagepath = 'http://'.$getHostname.$getPagepath;
 		$getPostID = url_to_postid($postPagepath);
+		// CF Added $output initialization to prevent warning
 		$output = '';
 		if ($getPostID <= 0) {
 			$titleStr = $postPagepath;
