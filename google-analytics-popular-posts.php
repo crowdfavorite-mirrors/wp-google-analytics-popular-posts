@@ -31,7 +31,9 @@ class GoogleAnalyticsPopularPosts extends WP_Widget {
 // Constructor
 //**************************************************************************************
 	function GoogleAnalyticsPopularPosts() {
-		$GAPP_url = get_bloginfo('siteurl');
+		//$GAPP_url = get_bloginfo('siteurl'); 
+		// CF edit to prevent deprectaed warning
+		$GAPP_url = get_bloginfo('url');
 		$lang = dirname( plugin_basename(__FILE__)) . "/languages";
 		load_plugin_textdomain('google-analytics-popular-posts', false, $lang);
 		$widget_ops = array('description' => __('This plugin uses Google Analytics API to fetch data from your analytics account and displays popular posts in the widget.', 'google-analytics-popular-posts'));
